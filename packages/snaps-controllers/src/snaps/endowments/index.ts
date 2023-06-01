@@ -25,6 +25,7 @@ import {
   transactionInsightCaveatSpecifications,
   transactionInsightEndowmentBuilder,
 } from './transaction-insight';
+import { userInputEndowmentBuilder } from './user-input';
 import { webAssemblyEndowmentBuilder } from './web-assembly';
 
 export const endowmentPermissionBuilders = {
@@ -38,6 +39,7 @@ export const endowmentPermissionBuilders = {
     ethereumProviderEndowmentBuilder,
   [rpcEndowmentBuilder.targetName]: rpcEndowmentBuilder,
   [webAssemblyEndowmentBuilder.targetName]: webAssemblyEndowmentBuilder,
+  [userInputEndowmentBuilder.targetName]: userInputEndowmentBuilder,
 } as const;
 
 export const endowmentCaveatSpecifications = {
@@ -63,6 +65,7 @@ export const handlerEndowments: Record<HandlerType, string> = {
   [HandlerType.SnapKeyring]: keyringEndowmentBuilder.targetName,
   [HandlerType.OnTransaction]: transactionInsightEndowmentBuilder.targetName,
   [HandlerType.OnCronjob]: cronjobEndowmentBuilder.targetName,
+  [HandlerType.OnUserInput]: userInputEndowmentBuilder.targetName,
 };
 
 export * from './enum';

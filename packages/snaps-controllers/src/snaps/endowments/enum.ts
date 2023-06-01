@@ -7,4 +7,5 @@ export enum SnapEndowments {
   EthereumProvider = 'endowment:ethereum-provider',
   Rpc = 'endowment:rpc',
   WebAssemblyAccess = 'endowment:webassembly',
+  UserInput = 'endowment:user-input',
 }

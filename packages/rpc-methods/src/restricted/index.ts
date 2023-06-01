@@ -15,6 +15,22 @@ import { getEntropyBuilder, GetEntropyHooks } from './getEntropy';
 import { invokeSnapBuilder, InvokeSnapMethodHooks } from './invokeSnap';
 import { manageStateBuilder, ManageStateMethodHooks } from './manageState';
 import { notifyBuilder, NotifyMethodHooks } from './notify';
+import {
+  readInterfaceBuilder,
+  ReadInterfaceMethodHooks,
+} from './readInterface';
+import {
+  resolveInterfaceBuilder,
+  ResolveInterfaceMethodHooks,
+} from './resolveInterface';
+import {
+  showInterfaceBuilder,
+  ShowInterfaceMethodHooks,
+} from './showInterface';
+import {
+  updateInterfaceBuilder,
+  UpdateInterfaceMethodHooks,
+} from './updateInterface';
 
 export type { DialogParameters } from './dialog';
 export { DialogType } from './dialog';
@@ -29,7 +45,11 @@ export type RestrictedMethodHooks = DialogMethodHooks &
   GetEntropyHooks &
   InvokeSnapMethodHooks &
   ManageStateMethodHooks &
-  NotifyMethodHooks;
+  NotifyMethodHooks &
+  ReadInterfaceMethodHooks &
+  ResolveInterfaceMethodHooks &
+  ShowInterfaceMethodHooks &
+  UpdateInterfaceMethodHooks;
 
 export const restrictedMethodPermissionBuilders = {
   [dialogBuilder.targetName]: dialogBuilder,
@@ -40,6 +60,10 @@ export const restrictedMethodPermissionBuilders = {
   [invokeSnapBuilder.targetName]: invokeSnapBuilder,
   [manageStateBuilder.targetName]: manageStateBuilder,
   [notifyBuilder.targetName]: notifyBuilder,
+  [readInterfaceBuilder.targetName]: resolveInterfaceBuilder,
+  [resolveInterfaceBuilder.targetName]: resolveInterfaceBuilder,
+  [showInterfaceBuilder.targetName]: showInterfaceBuilder,
+  [updateInterfaceBuilder.targetName]: updateInterfaceBuilder,
 } as const;
 
 export * from './caveats';
