@@ -60,7 +60,7 @@ export const restrictedMethodPermissionBuilders = {
   [invokeSnapBuilder.targetName]: invokeSnapBuilder,
   [manageStateBuilder.targetName]: manageStateBuilder,
   [notifyBuilder.targetName]: notifyBuilder,
-  [readInterfaceBuilder.targetName]: resolveInterfaceBuilder,
+  [readInterfaceBuilder.targetName]: readInterfaceBuilder,
   [resolveInterfaceBuilder.targetName]: resolveInterfaceBuilder,
   [showInterfaceBuilder.targetName]: showInterfaceBuilder,
   [updateInterfaceBuilder.targetName]: updateInterfaceBuilder,
