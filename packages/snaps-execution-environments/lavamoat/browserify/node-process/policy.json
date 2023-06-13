@@ -415,6 +415,11 @@
         "@metamask/snaps-utils>rfdc": true
       }
     },
+    "external:../snaps-utils/src/handlers.ts": {
+      "packages": {
+        "superstruct": true
+      }
+    },
     "external:../snaps-utils/src/icon.ts": {
       "builtin": {
         "buffer": true
