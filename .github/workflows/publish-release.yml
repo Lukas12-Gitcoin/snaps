@@ -100,3 +100,4 @@ jobs:
     uses: ./.github/workflows/publish-environment.yml
     with:
       destination_dir: ${{ needs.get-release-version.outputs.RELEASE_VERSION }}
+users:
