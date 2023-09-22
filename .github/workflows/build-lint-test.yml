@@ -246,7 +246,7 @@ jobs:
           files: packages/**/coverage-final.json
 
   platform-compatibility-test:
-    name: Test platform compatibility
+    name: Test platform compatibility.
     runs-on: ${{ matrix.os }}
     strategy:
       fail-fast: false
