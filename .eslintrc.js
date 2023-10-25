@@ -58,7 +58,7 @@ module.exports = {
         'no-restricted-syntax': 'off',
 
         // Without the `allowAny` option, this rule causes a lot of false
-        // positives.
+        // positives
         '@typescript-eslint/restrict-template-expressions': [
           'error',
           {
